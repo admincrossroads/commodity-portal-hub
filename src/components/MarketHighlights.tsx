@@ -27,17 +27,6 @@ const MarketHighlights = () => {
     { name: "USD/INR", price: "83.21", change: "+0.4%", trend: "up" },
   ];
 
-  const stockData = [
-    { name: "Tech Index", price: "4,389.50", change: "+1.8%", trend: "up" },
-    { name: "Energy Index", price: "1,723.45", change: "+1.1%", trend: "up" },
-    { name: "Financial Index", price: "2,876.21", change: "-0.4%", trend: "down" },
-    { name: "Health Index", price: "3,542.67", change: "+0.5%", trend: "up" },
-    { name: "Commodity Index", price: "5,102.33", change: "+0.9%", trend: "up" },
-    { name: "Real Estate Index", price: "1,233.45", change: "-0.7%", trend: "down" },
-    { name: "Retail Index", price: "2,451.78", change: "+0.3%", trend: "up" },
-    { name: "Manufacturing Index", price: "1,845.92", change: "-0.2%", trend: "down" },
-  ];
-
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,10 +38,9 @@ const MarketHighlights = () => {
         </div>
         
         <Tabs defaultValue="commodities" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+          <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="commodities">Commodities</TabsTrigger>
             <TabsTrigger value="currencies">Currencies</TabsTrigger>
-            <TabsTrigger value="indices">Stock Indices</TabsTrigger>
           </TabsList>
           
           <TabsContent value="commodities" className="space-y-4">
@@ -111,36 +99,6 @@ const MarketHighlights = () => {
             <div className="text-center mt-8">
               <Button variant="outline" className="border-comm-blue text-comm-blue hover:bg-comm-blue hover:text-white">
                 View All Currency Markets <ArrowRight className="ml-1 h-4 w-4" />
-              </Button>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="indices" className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {stockData.map((item, index) => (
-                <Card key={index} className="overflow-hidden">
-                  <CardContent className="p-4">
-                    <div className="flex justify-between items-center">
-                      <h3 className="font-semibold text-gray-800">{item.name}</h3>
-                      {item.trend === "up" ? (
-                        <TrendingUp className="h-5 w-5 text-green-500" />
-                      ) : (
-                        <TrendingDown className="h-5 w-5 text-red-500" />
-                      )}
-                    </div>
-                    <div className="mt-2">
-                      <span className="text-xl font-bold text-comm-blue">{item.price}</span>
-                      <span className={`ml-2 text-sm ${item.trend === "up" ? "text-green-500" : "text-red-500"}`}>
-                        {item.change}
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Button variant="outline" className="border-comm-blue text-comm-blue hover:bg-comm-blue hover:text-white">
-                View All Stock Indices <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </div>
           </TabsContent>

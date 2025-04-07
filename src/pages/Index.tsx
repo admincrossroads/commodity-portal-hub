@@ -1,5 +1,5 @@
 
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ServiceSection from '@/components/ServiceSection';
@@ -21,11 +21,11 @@ const Index = () => {
         <Navbar />
         <main className="flex-grow">
           <Hero />
-          <MarketHighlights />
           <ServiceSection />
+          <ChannelsSection id="channels" />
+          <MarketHighlights />
           <NewsSection />
           <TenderHighlights />
-          <ChannelsSection />
           <CallToAction />
         </main>
         <Footer />
