@@ -1,26 +1,23 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const Hero = () => {
+const Hero = ({ id }: { id?: string }) => {
   return (
-    <div className="hero-gradient text-white">
+    <div id={id} className="hero-gradient text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Your Gateway to Global Commodity Markets
+              Your Gateway to Ethiopian Commodity Markets
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-lg">
-              Access real-time market data, exchange rates, business news, and tender information all in one comprehensive platform.
+              Access real-time market data, exchange rates, business news, and
+              tender information all in one comprehensive platform.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button className="bg-comm-gold hover:bg-comm-gold-light text-comm-blue-dark text-lg px-8 py-6 font-medium">
-                Explore Markets
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-comm-blue text-lg px-8 py-6 font-medium">
-                Our Services
-              </Button>
+              {/* <Button className="bg-comm-gold hover:bg-comm-gold-light text-comm-blue-dark text-lg px-8 py-6 font-medium">
+                Explore Markets 
+              </Button> */}
             </div>
           </div>
           <div className="hidden md:block relative animate-slide-up">
@@ -28,7 +25,9 @@ const Hero = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-comm-gold to-comm-teal rounded-lg blur opacity-30"></div>
               <div className="relative bg-white/5 backdrop-blur-sm p-6 border border-white/10 rounded-lg">
                 <div className="text-right mb-2">
-                  <span className="text-xs text-gray-300">Last updated: Today 10:30 AM</span>
+                  <span className="text-xs text-gray-300">
+                    Last updated: Today 10:30 AM
+                  </span>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-white/10">
@@ -81,7 +80,10 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="mt-4 text-center">
-                  <a href="#" className="inline-flex items-center text-comm-teal-light hover:text-white text-sm font-medium">
+                  <a
+                    href="#"
+                    className="inline-flex items-center text-comm-teal-light hover:text-white text-sm font-medium"
+                  >
                     View All Markets <ArrowRight className="ml-1 h-4 w-4" />
                   </a>
                 </div>
