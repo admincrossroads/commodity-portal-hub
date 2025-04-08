@@ -9,6 +9,9 @@ import TenderHighlights from '@/components/TenderHighlights';
 import ChannelsSection from '@/components/ChannelsSection';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
+import AboutSection from '@/components/AboutSection';
+import HistorySection from '@/components/HistorySection';
+import TeamSection from '@/components/TeamSection';
 
 const Index = () => {
   return (
@@ -24,6 +27,9 @@ const Index = () => {
           <ServiceSection />
           <ChannelsSection id="channels" />
           <MarketHighlights />
+          <AboutSection />
+          <HistorySection />
+          <TeamSection />
           <NewsSection />
           <TenderHighlights />
           <CallToAction />
