@@ -9,35 +9,36 @@ import {
 } from "@/components/ui/carousel";
 
 const teamMembers = [
+ 
   {
-    name: "Sarah Johnson",
-    role: "CEO & Founder",
-    image: "/placeholder.svg",
-    bio: "Former commodity trader with 15 years of experience in global markets.",
-  },
-  {
-    name: "Michael Chen",
-    role: "CTO",
-    image: "/placeholder.svg",
-    bio: "Technical expert with background in financial systems and blockchain technology.",
-  },
-  {
-    name: "Elena Rodriguez",
-    role: "Market Analysis Director",
-    image: "/placeholder.svg",
+    name: "Ajjikuttira Appanna Ponappa",
+    role: "Business Analysis Director",
+    image: "/ponu.jpg",
     bio: "Economist specializing in commodity price forecasting and market trends.",
   },
   {
-    name: "David Okonkwo",
+    name: "Tariq Omar",
     role: "Head of Operations",
-    image: "/placeholder.svg",
+    image: "/tareq1.jpg",
     bio: "Supply chain specialist with extensive experience in commodity logistics.",
   },
   {
-    name: "Aisha Patel",
+    name: "Henok Shegute",
+    role: "CTO",
+    image: "/zinger.jpg",
+    bio: "Technical expert with background in financial systems ",
+  },
+  {
+    name: "Gedion Belete",
     role: "Community Manager",
-    image: "/placeholder.svg",
+    image: "/Gedi.jpg",
     bio: "Expert in building online communities and digital engagement strategies.",
+  },
+  {
+    name: "Omar Bagersh",
+    role: "CEO & Founder",
+    image: "/omar.jpg",
+    bio: "Former commodity trader with 15 years of experience in global markets.",
   },
 ];
 
@@ -76,13 +77,14 @@ const TeamSection = ({ id }: { id?: string }) => {
               {teamMembers.map((member, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
-                    <div className="aspect-square bg-gray-100 relative">
+                    <div className="w-full h-full bg-gray-100 relative overflow-hidden">
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="max-h-full max-w-full object-cover"
                       />
                     </div>
+
                     <div className="p-6 flex-grow">
                       <h4 className="text-lg font-semibold text-comm-blue">
                         {member.name}

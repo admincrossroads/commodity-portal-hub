@@ -16,42 +16,42 @@ const ServiceSection = ({ id }: { id?: string }) => {
       title: "Commodity Exchange",
       description:
         "Access our comprehensive commodity exchange platform with real-time trading opportunities across various markets.",
-      link: "/services/exchange",
+      link: "https://ankuaru.awakilo.com/home",
     },
     {
       icon: <DollarSign className="h-10 w-10 text-comm-blue" />,
       title: "Exchange Rates",
       description:
         "Stay updated with the latest currency exchange rates to make informed financial decisions.",
-      link: "/services/rates",
+      link: "https://ankuaru.awakilo.com/home",
     },
     {
       icon: <Newspaper className="h-10 w-10 text-comm-blue" />,
       title: "Business News",
       description:
         "Get the latest market insights, industry trends, and business news affecting commodity markets.",
-      link: "/services/news",
+      link: "https://ankuaru.awakilo.com/home",
     },
     {
       icon: <FileText className="h-10 w-10 text-comm-blue" />,
       title: "Tender Information",
       description:
         "Browse through current tenders and procurement opportunities across multiple industries.",
-      link: "/services/tenders",
+      link: "https://ankuaru.awakilo.com/home",
     },
     {
       icon: <BarChart className="h-10 w-10 text-comm-blue" />,
       title: "Market Pricing",
       description:
         "Access historical and real-time pricing data for all major commodity markets worldwide.",
-      link: "/services/pricing",
+      link: "https://ankuaru.awakilo.com/home",
     },
     {
       icon: <Users className="h-10 w-10 text-comm-blue" />,
       title: "Community Building",
       description:
         "Join our network of traders, businesses, and industry experts to share insights and opportunities.",
-      link: "/services/community",
+      link: "https://ankuaru.awakilo.com/home",
     },
   ];
 
